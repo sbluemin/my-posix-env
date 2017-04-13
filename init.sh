@@ -12,5 +12,5 @@ echo "Setting vim configuration..."
 rm -rf ~/.vim ~/.vimrc
 
 # 업데이트 받은 설정 파일들을 심볼릭 링크를 이용하여 홈 디렉토리에 세팅
-ln -sf .vimrc ~/.vimrc
-ln -sf .vim ~/.vim
+ln -sf ~/psetting/.vimrc ~/.vimrc
+ln -sf ~/psetting/.vim ~/.vim
