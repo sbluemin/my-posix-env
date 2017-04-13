@@ -1,0 +1,8 @@
+[submodule "vim/.vim/vundle"]
+	path = vim/.vim/vundle
+	url = https://github.com/VundleVim/Vundle.vim.git
+	ignore = dirty
+[submodule "vim/.vim/FuzzyFinder"]
+	path = vim/.vim/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+	ignore = dirty
