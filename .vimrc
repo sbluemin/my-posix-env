@@ -35,6 +35,7 @@ Plugin 'tpope/vim-fugitive'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
+Plugin 'moll/vim-node'
 
 call vundle#end()
 filetype plugin indent on
