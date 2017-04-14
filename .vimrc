@@ -40,3 +40,6 @@ Plugin 'moll/vim-node'
 call vundle#end()
 filetype plugin indent on
 
+colorscheme molokai
+set t_Co=256
+let g:molokai_original = 1
