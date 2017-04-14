@@ -33,6 +33,9 @@ Plugin 'airblade/vim-gitgutter'
 " 상태바에 git 정보 추가
 Plugin 'tpope/vim-fugitive'
 
+" Javascript
+Plugin 'pangloss/vim-javascript'
+
 call vundle#end()
 filetype plugin indent on
 
