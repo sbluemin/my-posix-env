@@ -7,6 +7,11 @@ set nu
 set showmatch "일치하는 괄호 표시
 set shiftwidth=4 "자동 들여쓰기 너비
 set laststatus=2 "상태바 표시 항상
+set history=1000 "편집 기록 갯수
+set ignorecase "검색 시, 대소문자 구분 안함
+
+map <C-b> :NERDTree<CR>
+map <C-w> :q<CR>
 
 if has("syntax")
 	syntax on
@@ -40,6 +45,6 @@ Plugin 'moll/vim-node'
 call vundle#end()
 filetype plugin indent on
 
-colorscheme molokai
+colorscheme desert
 set t_Co=256
 let g:molokai_original = 1
