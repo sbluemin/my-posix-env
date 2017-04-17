@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Get molokai colorschema..."
-sudo wget -O /usr/share/vim/vim74/colors/molokai.vim https://raw.github.com/tomasr/molokai/master/colors/molokai.vim
+sudo cp ./vim/molokai.vim /usr/share/vim/vim74/colors/molokai.vim 
 
 echo "Init and update submodules..."
 
