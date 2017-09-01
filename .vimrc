@@ -11,7 +11,7 @@ set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
 
 map <C-b> :NERDTree<CR>
-map <C-w> :q<CR>
+"map <C-w> :q<CR>
 map <C-s> :w<CR>
 
 if has("syntax")
