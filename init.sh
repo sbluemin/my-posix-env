@@ -1,10 +1,5 @@
 #!/bin/bash
 
-echo "Get molokai colorschema..."
-sudo cp ./vim/molokai.vim /usr/share/vim/vim74/colors/molokai.vim 
-
-sudo cp ./vim/molokai.vim /usr/share/vim/vim/colors/molokai.vim 
-
 echo "Init and update submodules..."
 
 # Update submodules

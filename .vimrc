@@ -1,6 +1,7 @@
 set hlsearch "검색어 하이라이팅
 set ruler "현재 커서 위치 표시
 set ts=4
+set expandtab
 set autoindent
 set cindent
 set nu
@@ -9,6 +10,9 @@ set shiftwidth=4 "자동 들여쓰기 너비
 set laststatus=2 "상태바 표시 항상
 set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
+
+let python_version_3 = 1
+let python_highlight_all = 1
 
 map <C-b> :NERDTree<CR>
 "map <C-w> :q<CR>
@@ -25,6 +29,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" 컬러 스키마들
+Plugin 'tomasiser/vim-code-dark'
+
 Plugin 'The-NERD-tree'
 
 " 고속 파일 찾기
@@ -43,9 +51,18 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'moll/vim-node'
 
+" Ctags
+Plugin 'ctags.vim'
+
+" Python
+Plugin 'davidhalter/jedi-vim'
+
 call vundle#end()
 filetype plugin indent on
 
-colorscheme desert
+let g:airline_theme = 'codedark'
 set t_Co=256
-let g:molokai_original = 1
+set t_ut=
+colorscheme codedark
+
+"let g:molokai_original = 1dd
