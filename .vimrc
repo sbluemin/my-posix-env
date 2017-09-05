@@ -12,29 +12,19 @@ set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
 set splitright "수직 창 분할 시 새로운 창을 오른쪽으로 
 set splitbelow "수평 창 분할 시 새로운 창을 아래로
-
+set tags=./tags,tags
 set diffopt+=iwhite " vimdiff에서 공백 문자 무시
 
-let python_version_3 = 1
-let python_highlight_all = 1
-
+" Vim 크기 확장 안함.
+let Tlist_Inc_Winwidth=0
+" 오른쪽에 태그리스트 보여줌
+let Tlist_Use_Right_Window=1
 " Vim
 let g:indentLine_color_term = 239
 
-" GVim
-"let g:indentLine_color_gui = '#A4E57E'
-
-" none X terminal
-"let g:indentLine_color_tty_light = 7 " (default: 4)
-"let g:indentLine_color_dark = 1 " (default: 2)
-
-" Background (Vim, GVim)
-"let g:indentLine_bgcolor_term = 202
-"let g:indentLine_bgcolor_gui = '#FF5F00'
-
-map <C-b> :NERDTree<CR>
-"map <C-w> :q<CR>
-map <C-s> :w<CR>
+nnoremap <silent> <F10> :NERDTree<CR>
+nnoremap <silent> <F11> :TlistToggle<CR>
+nnoremap <silent> <C-F11> :w<CR>:TlistUpdate<CR>
 
 if has("syntax")
 	syntax on
@@ -76,6 +66,9 @@ Plugin 'ctags.vim'
 Plugin 'davidhalter/jedi-vim'
 
 Plugin 'Yggdroot/indentLine'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
