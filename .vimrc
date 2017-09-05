@@ -10,6 +10,8 @@ set shiftwidth=4 "자동 들여쓰기 너비
 set laststatus=2 "상태바 표시 항상
 set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
+set splitright "수직 창 분할 시 새로운 창을 오른쪽으로 
+set splitbelow "수평 창 분할 시 새로운 창을 아래로
 
 set diffopt+=iwhite " vimdiff에서 공백 문자 무시
 
