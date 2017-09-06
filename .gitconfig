@@ -1,6 +1,6 @@
 [user]
-    email =
-    name = 
+	email = hyeonmin.yoon@netmarble.com
+	name = 윤 현민
 
 [core]
 	longpaths = true
@@ -8,6 +8,13 @@
 	fscache = true
 	autocrlf = input
 	editor = vim
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[mergetool]
+    prompt = false
 
 [alias]
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --name-status
