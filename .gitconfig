@@ -1,6 +1,6 @@
 [user]
-	email = ~
-	name = ~
+    email =
+    name = 
 
 [core]
 	longpaths = true
@@ -8,14 +8,19 @@
 	fscache = true
 	autocrlf = input
 	editor = vim
-					 
-[mergetool "vscode"]
-		 
+
 [alias]
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --name-status
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	lg = !"git lg1"
-	st = status
-	bl = branch -a
-	showtool = "!showci () { rev=${1:-HEAD}; git difftool $rev~1 $rev; }; showci $1"
+	ls = !"git lg1"
+    cp = cherry-pick
+    st = status
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch 
+    diff = diff --word-diff
+    dc = diff --cached
+	showtool = "!showci () { rev=${1:-HEAD}; git difftool -y $rev~1 $rev; }; showci $1"
 

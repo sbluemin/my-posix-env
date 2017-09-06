@@ -11,6 +11,8 @@ set laststatus=2 "상태바 표시 항상
 set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
 
+set diffopt+=iwhite " vimdiff에서 공백 문자 무시
+
 let python_version_3 = 1
 let python_highlight_all = 1
 
