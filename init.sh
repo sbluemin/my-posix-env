@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ctags 설치
+apt-get install ctags
+
 echo "Init and update submodules..."
 
 # Update submodules
