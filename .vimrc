@@ -73,6 +73,7 @@ Plugin 'taglist.vim'
 call vundle#end()
 filetype plugin indent on
 
+let NERDTreeShowHidden=1
 let g:airline_theme = 'codedark'
 set t_Co=256
 set t_ut=
