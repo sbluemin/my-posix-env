@@ -21,3 +21,4 @@ rm -rf ~/.vim ~/.vimrc
 ln -sf ~/"$BASENAME"/.vimrc ~/.vimrc
 ln -sf ~/"$BASENAME"/vim/.vim ~/.vim
 ln -sf ~/"$BASENAME"/.tmux.conf ~/.tmux.conf
+ln -sf ~/"$BASENAME"/.gitconfig ~/.gitconfig
