@@ -67,7 +67,6 @@ Plugin 'ctags.vim'
 " Python
 Plugin 'davidhalter/jedi-vim'
 
-Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'taglist.vim'
