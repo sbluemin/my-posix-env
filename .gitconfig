@@ -30,3 +30,5 @@
     pull = pull --rebase
 	showtool = "!showci () { rev=${1:-HEAD}; git difftool -y $rev~1 $rev; }; showci $1"
 
+[push]
+	default = simple
