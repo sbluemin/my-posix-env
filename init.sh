@@ -1,5 +1,8 @@
 #!/bin/bash
 
+CURRENT=`pwd`
+BASENAME=`basename "$CURRENT"`
+
 # ctags 설치
 apt-get install ctags
 
@@ -15,6 +18,6 @@ echo "Setting vim configuration..."
 rm -rf ~/.vim ~/.vimrc
 
 # 업데이트 받은 설정 파일들을 심볼릭 링크를 이용하여 홈 디렉토리에 세팅
-ln -sf ~/psetting/.vimrc ~/.vimrc
-ln -sf ~/psetting/vim/.vim ~/.vim
-ln -sf ~/psetting/.tmux.conf ~/.tmux.conf
+ln -sf ~/"$BASENAME"/.vimrc ~/.vimrc
+ln -sf ~/"$BASENAME"/vim/.vim ~/.vim
+ln -sf ~/"$BASENAME"/.tmux.conf ~/.tmux.conf
