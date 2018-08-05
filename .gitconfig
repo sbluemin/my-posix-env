@@ -6,7 +6,6 @@
 	longpaths = true
 	preloadindex = true
 	fscache = true
-	autocrlf = input
 	editor = vim
 
 [merge]
