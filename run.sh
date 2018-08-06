@@ -6,6 +6,9 @@ BASENAME=`basename "$CURRENT"`
 # ctags 설치
 apt-get install ctags
 
+# tmux 설치
+apt-get install tmux
+
 echo "Init and update submodules..."
 
 # Update submodules
