@@ -26,8 +26,10 @@
     br = branch 
     diff = diff --word-diff
     dc = diff --cached
-    pull = pull --rebase
 	showtool = "!showci () { rev=${1:-HEAD}; git difftool -y $rev~1 $rev; }; showci $1"
 
 [push]
 	default = simple
+
+[pull]
+    rebase = true
