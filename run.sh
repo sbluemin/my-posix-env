@@ -3,6 +3,9 @@
 CURRENT=`pwd`
 BASENAME=`basename "$CURRENT"`
 
+# vim 설치
+apt-get install vim
+
 # ctags 설치
 apt-get install ctags
 
