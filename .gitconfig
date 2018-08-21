@@ -27,6 +27,7 @@
     diff = diff --word-diff
     dc = diff --cached
 	showtool = "!showci () { rev=${1:-HEAD}; git difftool -y $rev~1 $rev; }; showci $1"
+    find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 
 [push]
 	default = simple
