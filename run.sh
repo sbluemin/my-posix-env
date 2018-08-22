@@ -28,6 +28,7 @@ ln -sf ~/"$BASENAME"/.vimrc ~/.vimrc
 ln -sf ~/"$BASENAME"/vim/.vim ~/.vim
 ln -sf ~/"$BASENAME"/.tmux.conf ~/.tmux.conf
 ln -sf ~/"$BASENAME"/.gitconfig ~/.gitconfig
+ln -sf ~/"$BASENAME"/.bashrc ~/.bashrc
 
 # 세팅 후 vim 플러그인 설치
 vim +PluginInstall +qall
