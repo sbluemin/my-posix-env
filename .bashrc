@@ -3,6 +3,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+alias tmux='tmux -2'
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -116,6 +118,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-alias tmux='TERM=xterm-256color tmux -2'
-
