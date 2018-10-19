@@ -1,7 +1,6 @@
 #!/bin/bash
 
-CURRENT=`pwd`
-BASENAME=`basename "$CURRENT"`
+PWD= $(pwd)
 
 # vim 설치
 apt-get install vim
@@ -24,12 +23,12 @@ echo "Setting vim configuration..."
 rm -rf ~/.vim ~/.vimrc
 
 # 업데이트 받은 설정 파일들을 심볼릭 링크를 이용하여 홈 디렉토리에 세팅
-ln -sf ~/"$BASENAME"/.vimrc ~/.vimrc
-ln -sf ~/"$BASENAME"/vim/.vim ~/.vim
-ln -sf ~/"$BASENAME"/.tmux.conf ~/.tmux.conf
-ln -sf ~/"$BASENAME"/.gitconfig ~/.gitconfig
-ln -sf ~/"$BASENAME"/.bashrc ~/.bashrc
-ln -sf ~/"$BASENAME"/.bash_aliases ~/.bash_aliases
+ln -sf $PWD/.vimrc ~/.vimrc
+ln -sf $PWD/vim/.vim ~/.vim
+ln -sf $PWD/.tmux.conf ~/.tmux.conf
+ln -sf $PWD/.gitconfig ~/.gitconfig
+ln -sf $PWD/.bashrc ~/.bashrc
+ln -sf $PWD/.bash_aliases ~/.bash_aliases
 
 # 세팅 후 vim 플러그인 설치
 vim +PluginInstall +qall
