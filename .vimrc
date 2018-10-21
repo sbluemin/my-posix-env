@@ -78,6 +78,6 @@ let NERDTreeShowHidden=1
 let g:airline_theme = 'codedark'
 set t_Co=256
 set t_ut=
-colorscheme codedark
+"colorscheme codedark
 
 "let g:molokai_original = 1dd

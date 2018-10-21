@@ -7,3 +7,6 @@ alias gci='g ci'
 alias gco='g co'
 alias glg='g lg'
 alias glg2='g lg2'
+
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-rm-all='docker rm $(docker ps -a -q)'
