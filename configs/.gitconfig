@@ -6,6 +6,7 @@
 	longpaths = true
 	preloadindex = true
 	fscache = true
+    editor = vim
 
 [code]
     editor = vim
