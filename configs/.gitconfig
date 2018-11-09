@@ -11,6 +11,12 @@
 [code]
     editor = vim
 
+[diff]
+    tool = p4merge
+
+[merge]
+    tool = p4merge
+
 [mergetool]
     prompt = false
 

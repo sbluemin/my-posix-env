@@ -31,6 +31,7 @@ ln -sf ~/.sbluemin/configs/.vimrc ~/.vimrc
 ln -sf ~/.sbluemin/configs/.tmux.conf ~/.tmux.conf
 ln -sf ~/.sbluemin/configs/.gitconfig ~/.gitconfig
 ln -sf ~/.sbluemin/configs/.bashrc ~/.bashrc
+ln -sf ~/.sbluemin/configs/.bashrc ~/.bash_profile
 ln -sf ~/.sbluemin/configs/.bash_aliases ~/.bash_aliases
 
 # 세팅 후 vim 플러그인 설치
