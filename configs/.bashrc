@@ -5,6 +5,8 @@
 
 alias tmux='tmux -2'
 
+export CLICOLOR=1
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
