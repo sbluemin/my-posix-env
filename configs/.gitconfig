@@ -43,6 +43,3 @@
 
 [credential]
 	helper = cache
-
-[includeIf "gitdir:~/thebackend/"]
-    path = ~/.sbluemin/configs/.gitconfig-afi
