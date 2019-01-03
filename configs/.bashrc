@@ -125,9 +125,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export LANG='ko_KR.UTF-8'
-export LC_ALL='ko_KR.UTF-8'
-
 # Show git branch name and dirty file status
 force_color_prompt=yes
 color_prompt=yes
