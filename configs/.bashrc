@@ -128,15 +128,25 @@ fi
 export LANG='ko_KR.UTF-8'
 export LC_ALL='ko_KR.UTF-8'
 
-# Show git branch name
+# Show git branch name and dirty file status
 force_color_prompt=yes
 color_prompt=yes
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+
+function parse_git_dirty {
+    [[ -n "$(git status -s 2> /dev/null)" ]] && echo "*"
 }
+
+parse_git_branch_2() {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+}
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\] $(parse_git_branch)\[\033[00m\]\$ '
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\] $(parse_git_branch_2)\[\033[00m\]\$ '
 else
- PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w $(parse_git_branch)\$ '
+ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w $(parse_git_branch_2)\$ '
 fi
 unset color_prompt force_color_prompt
