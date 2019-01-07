@@ -15,7 +15,8 @@ set splitbelow "수평 창 분할 시 새로운 창을 아래로
 set tags=./tags,tags
 set diffopt+=iwhite " vimdiff에서 공백 문자 무시
 set visualbell
-set t_vb=
+set listchars=tab:\|\ 
+set list
 
 " Vim 크기 확장 안함.
 let Tlist_Inc_Winwidth=0
