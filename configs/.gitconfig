@@ -6,7 +6,7 @@
 	longpaths = true
 	preloadindex = true
 	fscache = true
-    editor = code --wait
+    editor = vim
 
 [diff]
     tool = vscode
