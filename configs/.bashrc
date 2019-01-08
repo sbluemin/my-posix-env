@@ -147,3 +147,5 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w $(parse_git_branch_2)\$ '
 fi
 unset color_prompt force_color_prompt
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
