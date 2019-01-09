@@ -26,8 +26,8 @@ let Tlist_Use_Right_Window=1
 let g:indentLine_color_term = 239
 
 nnoremap <silent> <F10> :NERDTree<CR>
-nnoremap <silent> <F11> :TlistToggle<CR>
-nnoremap <silent> <C-F11> :w<CR>:TlistUpdate<CR>
+nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <C-F9> :w<CR>:TlistUpdate<CR>
 
 if has("syntax")
 	syntax on
@@ -41,13 +41,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
 " 컬러 스키마들
 Plugin 'tomasiser/vim-code-dark'
 
 Plugin 'The-NERD-tree'
-
-" 고속 파일 찾기
-Plugin 'ctrlp.vim'
 
 " VIM 하단 상태바 추가
 Plugin 'vim-airline/vim-airline'
