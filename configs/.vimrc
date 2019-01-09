@@ -22,6 +22,9 @@ set list
 let Tlist_Inc_Winwidth=0
 " 오른쪽에 태그리스트 보여줌
 let Tlist_Use_Right_Window=1
+let Tlist_Auto_Update=1
+let Tlist_WinWidth=60
+
 " Vim
 let g:indentLine_color_term = 239
 
