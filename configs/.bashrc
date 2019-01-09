@@ -149,3 +149,13 @@ fi
 unset color_prompt force_color_prompt
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+function fview()
+{
+    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500'
+}

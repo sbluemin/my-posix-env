@@ -2,22 +2,52 @@
 
 PWD= $(pwd)
 
-# vim 설치
-apt-get install vim
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
 
-# ctags 설치
-apt-get install ctags
+if [ "${machine}" == "Linux" ]; then
+    sudo add-apt-repository ppa:x4121/ripgrep
+    sudo apt-get update
 
-# tmux 설치
-apt-get install tmux
+    sudo apt-get install ripgrep
+    
+    # vim 설치
+    sudo apt-get install vim
 
-echo "Init and update submodules..."
+    # ctags 설치
+    sudo apt-get install ctags
+    
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+
+elif [ "${machine}" == "Mac" ]; then
+    brew install ripgrep
+
+    # vim 설치
+    brew install vim
+
+    # ctags 설치
+    brew install ctags
+
+    # git 설치
+    brew install git
+
+    brew install fzf
+
+else
+    echo "This script supported only mac or linux!"
+    exit -1
+fi
 
 # Update submodules
 git submodule init
 git submodule update
-
-echo "Setting vim configuration..."
 
 # 기존 홈 디렉토리에 존재하는 vim 관련 파일들 정리
 rm -rf ~/.vim ~/.vimrc
