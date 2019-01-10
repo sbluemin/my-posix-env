@@ -1,3 +1,5 @@
+alias v='vim'
+
 # git
 alias g='git'
 alias gst='g st'

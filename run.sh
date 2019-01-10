@@ -27,7 +27,7 @@ if [ "${machine}" == "Linux" ]; then
     ~/.fzf/install
 
 elif [ "${machine}" == "Mac" ]; then
-    brew install ripgrep
+    brew update
 
     # vim 설치
     brew install vim
@@ -39,6 +39,8 @@ elif [ "${machine}" == "Mac" ]; then
     brew install git
 
     brew install fzf
+    brew install ripgrep
+
 
 else
     echo "This script supported only mac or linux!"
