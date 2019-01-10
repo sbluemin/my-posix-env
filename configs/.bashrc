@@ -151,7 +151,7 @@ unset color_prompt force_color_prompt
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # fzf functions
-fview()
+fv()
 {
     fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
                  echo {} is a binary file ||
@@ -161,7 +161,7 @@ fview()
                   cat {}) 2> /dev/null | head -500'
 }
 
-# fd - cd to selected directory
+# fzf fd - cd to selected directory
 fd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
