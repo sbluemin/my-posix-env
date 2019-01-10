@@ -1,12 +1,10 @@
 set hlsearch "검색어 하이라이팅
 set ruler "현재 커서 위치 표시
 set ts=4
-set expandtab
-set autoindent
 set cindent
 set nu
 set showmatch "일치하는 괄호 표시
-set shiftwidth=4 "자동 들여쓰기 너비
+set autoindent noexpandtab tabstop=4 shiftwidth=4
 set laststatus=2 "상태바 표시 항상
 set history=1000 "편집 기록 갯수
 set ignorecase "검색 시, 대소문자 구분 안함
@@ -17,6 +15,16 @@ set diffopt+=iwhite " vimdiff에서 공백 문자 무시
 set visualbell
 set listchars=tab:\|\ 
 set list
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " Vim 크기 확장 안함.
 let Tlist_Inc_Winwidth=0
@@ -81,7 +89,6 @@ filetype plugin indent on
 let NERDTreeShowHidden=1
 let g:airline_theme = 'codedark'
 set t_Co=256
-set t_ut=
 colorscheme codedark
 
 "let g:molokai_original = 1dd
