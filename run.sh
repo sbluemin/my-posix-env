@@ -41,6 +41,9 @@ elif [ "${machine}" == "Mac" ]; then
     brew install fzf
     brew install ripgrep
 
+	# mac vscode vim에서 키 repat가 안되는 문제
+	defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false 
+
 
 else
     echo "This script supported only mac or linux!"
