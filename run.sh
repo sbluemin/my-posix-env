@@ -43,6 +43,7 @@ elif [ "${machine}" == "Mac" ]; then
 
 	# mac vscode vim에서 키 repat가 안되는 문제
 	defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false 
+	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 
 else
