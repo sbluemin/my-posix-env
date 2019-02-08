@@ -126,7 +126,7 @@ force_color_prompt=yes
 color_prompt=yes
 
 function parse_git_dirty {
-    [[ -n "$(git status -s 2> /dev/null)" ]] && echo "*"
+    [[ -n "$(git status -s --ignore-submodules=all 2> /dev/null)" ]] && echo "*"
 }
 
 parse_git_branch_2() {

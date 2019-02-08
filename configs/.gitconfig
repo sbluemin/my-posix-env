@@ -7,6 +7,7 @@
 	preloadindex = true
 	fscache = true
     editor = vim
+	autocrlf = true
 
 [diff]
     tool = vscode
@@ -25,13 +26,13 @@
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -25
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     cp = cherry-pick
-    st = status
+	st = status
     cl = clone
     ci = commit
     co = checkout
     br = branch 
-    diff = diff --word-diff
-    dc = diff --cached
+	diff = diff --word-diff 
+	dc = diff --cached
 	showtool = "!showci () { rev=${1:-HEAD}; git difftool -y $rev~1 $rev; }; showci $1"
     find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 
