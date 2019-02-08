@@ -2,55 +2,20 @@
 
 PWD= $(pwd)
 
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    *)          machine="UNKNOWN:${unameOut}"
-esac
+sudo add-apt-repository ppa:x4121/ripgrep
+sudo apt-get update
 
-if [ "${machine}" == "Linux" ]; then
-    sudo add-apt-repository ppa:x4121/ripgrep
-    sudo apt-get update
+sudo apt-get install ripgrep
 
-    sudo apt-get install ripgrep
+# vim 설치
+sudo apt-get install vim
+
+# ctags 설치
+sudo apt-get install ctags
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
     
-    # vim 설치
-    sudo apt-get install vim
-
-    # ctags 설치
-    sudo apt-get install ctags
-    
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-
-elif [ "${machine}" == "Mac" ]; then
-    brew update
-
-    # vim 설치
-    brew install vim
-
-    # ctags 설치
-    brew install ctags
-
-    # git 설치
-    brew install git
-
-    brew install fzf
-    brew install ripgrep
-
-	# mac vscode vim에서 키 repat가 안되는 문제
-	defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false 
-	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-
-
-else
-    echo "This script supported only mac or linux!"
-    exit -1
-fi
-
 # Update submodules
 git submodule init
 git submodule update
