@@ -7,7 +7,6 @@
 	preloadindex = true
 	fscache = true
     editor = vim
-	autocrlf = true
 
 [diff]
     tool = vscode
