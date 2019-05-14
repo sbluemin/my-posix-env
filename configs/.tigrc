@@ -94,7 +94,7 @@ set reference-format = [branch] <tag> {remote} ~replace~
 
 # Git으로 부터 어떻게 정보를 읽을지를 조절하는 설정들
 set commit-order = auto # Enum: auto, default, topo, date, reverse (main view)
-set status-untracked-dirs = yes # 트래킹하고 있지 않은 디렉토리의 파일들도 보여주는가? (status)
+set status-show-untracked-dirs = yes # 트래킹하고 있지 않은 디렉토리의 파일들도 보여주는가? (status)
 set ignore-space = no # Enum: no, all, some, at-eol (diff)
 set show-notes = yes # `--show-notes=...` 를 전달하는가? (diff)
 set diff-context = 6 # diff changes 를 보여줄 때 라인 수 (diff)

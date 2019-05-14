@@ -1,7 +1,7 @@
 alias v='vim'
 
 # tig
-alias tig='tig --all'
+alias tiga='tig --all'
 
 # git
 alias g='git'
