@@ -1,7 +1,7 @@
 alias v='vim'
 
 # tig
-alias tig='tig --all --author-date-order'
+alias tig='tig --all'
 
 # git
 alias g='git'
