@@ -5,14 +5,10 @@ PWD= $(pwd)
 sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt-get update
 
-sudo apt-get install ripgrep
+# 필수 패키지 설치
+sudo apt-get install -y ripgrep vim ctags tig
 
-# vim 설치
-sudo apt-get install vim
-
-# ctags 설치
-sudo apt-get install ctags
-
+# Fuzzy finder 설치
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
     
@@ -31,6 +27,7 @@ ln -sf ~/.sbluemin/vim/.vim ~/.vim
 
 ln -sf ~/.sbluemin/configs/.vimrc ~/.vimrc
 ln -sf ~/.sbluemin/configs/.tmux.conf ~/.tmux.conf
+ln -sf ~/.sbluemin/configs/.tigrc ~/.tigrc
 ln -sf ~/.sbluemin/configs/.gitconfig ~/.gitconfig
 ln -sf ~/.sbluemin/configs/.bashrc ~/.bashrc
 ln -sf ~/.sbluemin/configs/.bashrc ~/.bash_profile

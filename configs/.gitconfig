@@ -7,6 +7,7 @@
 	preloadindex = true
 	fscache = true
     editor = vim
+	autocrlf = input
 
 [diff]
     tool = vscode
@@ -42,4 +43,4 @@
     rebase = true
 
 [credential]
-	helper = cache
+	helper = store

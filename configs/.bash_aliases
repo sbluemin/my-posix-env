@@ -1,5 +1,8 @@
 alias v='vim'
 
+# tig
+alias tig='tig --all --author-date-order'
+
 # git
 alias g='git'
 alias gst='g st --ignore-submodules=all'
